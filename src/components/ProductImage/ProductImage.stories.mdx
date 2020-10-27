@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import ProductImage from './'
+
+<Meta title="360 Menu/Product Image" component={ProductImage} />
+
+<Story name="default">
+    <div style={{width: '20px', height: '1000px', objectFit: 'cover', overflow: 'hidden'}}>
+        <ProductImage 
+            image="https://minimalistbaker.com/wp-content/uploads/2016/05/THE-BEST-Vegan-Chocolate-Ice-Cream-SO-creamy-rich-and-easy-to-make-vegan-glutenfree-icecream-dessert-chocolate-recipe-summer.jpg" 
+            name="ice cream"
+        />
+    </div>
+</Story>

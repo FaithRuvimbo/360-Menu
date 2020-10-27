@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Icon from './';
+
+<Meta title="360 Menu/Icon" component={Icon} />
+
+# Icon component
+
+takes a name of the icon it should display
+it should inherrit the color from its parrent
+the should appear in different sizes
+
+export const Template = (args) => <Icon {...args}/> 
+
+<Canvas>
+    <Story name="default Icon" args={{name: "drinks"}}>
+        {Template.bind({})}
+    </Story>
+    <Story name="small Icon" args={{name: "heart", size: "small"}}>
+        {Template.bind({})}
+    </Story>
+    <Story name="medium Icon"args={{name: "trash", size: "medium"}}>
+        {Template.bind({})}
+    </Story>
+    <Story name="large Icon" args={{name: "plus", size: "large"}}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
