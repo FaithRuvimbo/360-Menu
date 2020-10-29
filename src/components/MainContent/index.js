@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Animated } from 'react-animated-css'
 import ProductCard from '../ProductCard'
 import { GlobalContext } from '../../store'
 import './style.css'
@@ -35,7 +36,15 @@ const MainContent = () => {
         {products
           .filter(e => (e.subcategory ? e.subcategory === subCategory : true))
           .map((e, index) => (
-            <ProductCard key={index} item={e} isExpanded={e.isExpanded} />
+            <Animated
+              key={e.id}
+              animationInDelay={index * 30}
+              animationIn="bounceInUp"
+              animationOut="fadeOut"
+              isVisible
+            >
+              <ProductCard key={index} item={e} isExpanded={e.isExpanded} />
+            </Animated>
           ))}
       </div>
     </div>
