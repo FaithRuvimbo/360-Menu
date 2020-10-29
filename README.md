@@ -9,6 +9,6 @@ to start this project on your local computer:
 - run `npm i` to install dependencies
 - run `npm run storybook` to start storybook, which should be available on [http://localhost:6006](http://localhost:6006), storybook will automatically reload when you update components or stories
 - run `npm run develop` to start a develop instance of gatsby, which should be available on [http://localhost:8000](http://localhost:8000), gatsby will automatically reload when you update components
-- run `npm run cypress` to start automated tests. tests are write on `/cypress/integration/360-menu`
+- run `npm run cypress` to start automated tests. tests are write on `/cypress/integration/360-menu` directory
 
 _👨‍💻 happy coding 🎉_
