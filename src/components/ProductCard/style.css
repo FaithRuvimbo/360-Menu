@@ -1,0 +1,94 @@
+.card-root {
+  display: flex;
+
+  height: 160px;
+  width: 277px;
+
+  margin-bottom: 20px;
+  margin-right: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.card-title {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #222222;
+
+  padding-left: 12px;
+  padding-top: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+.card-image {
+  flex-shrink: 1;
+  height: 100%;
+}
+.card-content {
+  flex: 1;
+}
+
+.card-likes {
+  padding-left: 12px;
+  padding-top: 4px;
+}
+
+.card-description {
+  height: 52.5px;
+  padding-top: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 9px;
+  font-family: 'Work Sans';
+  font-weight: 400;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+
+.card-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12.5px;
+}
+
+.card-price {
+  padding-left: 87px;
+  padding-top: 6px;
+}
+
+.card-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e54a2d;
+  border-radius: 5px 0px;
+
+  color: white;
+  font-weight: 800;
+  font-size: x-large;
+
+  cursor: pointer;
+}
+
+.card-likes-icon {
+  filter: invert(1);
+  width: 10px;
+}

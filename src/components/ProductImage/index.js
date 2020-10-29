@@ -9,5 +9,4 @@ ProductImage.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 }
-
 export default ProductImage

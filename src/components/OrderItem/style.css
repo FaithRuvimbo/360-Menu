@@ -1,0 +1,165 @@
+.order-item-root {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+}
+
+.order-item-root {
+  color: #ffffff;
+  border-bottom: 1px solid #333333;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+}
+
+.order-item-root.order-disabled {
+  color: #4f4f4f;
+}
+
+.order-item-title {
+  padding-top: 20px;
+}
+
+.order-item-description {
+  padding-top: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-item-notes {
+  padding-top: 18px;
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+  color: #4f4f4f;
+}
+
+.order-item-notes:before {
+  display: inline-block;
+  margin-right: 4px;
+  content: '';
+  mask: url('/icons/basic/pencil-edit.svg') no-repeat 50% 50%;
+  -webkit-mask: url('/icons/basic/pencil-edit.svg') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-size: 13px 13px;
+  height: 13px;
+  width: 13px;
+  background-color: #dadada;
+}
+
+.order-item-1 {
+  width: 300px;
+  flex-grow: 1;
+}
+
+.order-item-2 {
+  padding-top: 20px;
+  flex-shrink: 1;
+}
+
+.time-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button {
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button {
+  margin-right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-icon {
+  width: 40px;
+  height: 40px;
+  -webkit-mask-size: 18px;
+  -webkit-mask: url('/icons/time/time.png') no-repeat 50% 50%;
+  background-color: #e54a2d;
+}
+.edit-icon {
+  width: 40px;
+  height: 40px;
+  -webkit-mask: url('/icons/basic/copy.svg') no-repeat 50% 50%;
+  -webkit-mask-size: 18px;
+  background: #dadada;
+}
+.delete-icon {
+  width: 40px;
+  height: 40px;
+  -webkit-mask: url('/icons/basic/trash.svg') no-repeat 50% 50%;
+  -webkit-mask-size: 18px;
+  background: #dadada;
+}
+
+.order-item-4 {
+  display: flex;
+  align-self: flex-end;
+  padding-top: 16px;
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #4f4f4f;
+}
+
+.order-item-size {
+  margin-right: 20px;
+}
+
+.order-item-time {
+  display: flex;
+  align-items: center;
+}
+
+.actual-time {
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 47px;
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+  /* or 14px */
+
+  /* Gray 4 */
+
+  color: #bdbdbd;
+}
+
+.order-actions {
+  display: flex;
+}

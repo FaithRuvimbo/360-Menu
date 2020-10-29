@@ -1,0 +1,20 @@
+.sidebar-root {
+  background: #222222;
+  flex-shrink: 1;
+  width: 90px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+}
+.sidebar-logo-container {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-logo {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  justify-self: center;
+}
