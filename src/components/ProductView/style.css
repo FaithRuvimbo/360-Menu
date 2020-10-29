@@ -227,3 +227,46 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.product-view-options {
+  margin: 30px 40px 0px 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333333;
+}
+
+.product-view-options .title {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.product-view-options .options {
+  margin: 10px 0px;
+  display: flex;
+}
+
+.product-view-options .options .name {
+  padding-left: 15px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  color: #bdbdbd;
+}
+.product-view-options .options .price {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+
+  word-wrap: unset;
+
+  padding-left: 20px;
+
+  color: #bdbdbd;
+}

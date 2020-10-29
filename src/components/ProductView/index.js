@@ -56,9 +56,25 @@ const ProductView = () => {
 
       {currentProduct.options ? (
         <div className="product-view-options">
-          <div className="title">Options</div>,
-          {currentProduct.options.map(e => (
-            <div className="options">{e}</div>
+          <div className="title">Options</div>
+          {currentProduct.options.map((e, i) => (
+            <div className="options">
+              <input
+                type="radio"
+                id="options"
+                name={e.option}
+                value={i}
+                onChange={() =>
+                  dispatch({
+                    type: 'setCurrentProductOption',
+                    payload: i,
+                  })
+                }
+                checked={i === currentProduct.option}
+              />
+              <span className="name">{e.option}</span>
+              {e.price ? <span className="price"> +$ {e.price}</span> : ''}
+            </div>
           ))}
         </div>
       ) : (

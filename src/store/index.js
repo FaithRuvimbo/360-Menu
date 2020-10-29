@@ -29,21 +29,55 @@ const initialState = {
       notes: 'No ice please',
     },
     {
-      id: 'recVczFghT4sY3SUk',
+      id: 'recgZWzz4H3KEdokK',
+      subcategory: 'SALAD GREENS',
       inStock: true,
-      size: '32cm',
       canBeLiked: true,
-      unitCost: 225,
-      category: ['recaNPedbdvaT5058'],
+      unitCost: 89,
+      options: [
+        { option: 'no extras', price: 0 },
+        { option: 'Add Chicken/ Bacon', price: 25 },
+        { option: 'Add Anchovies/ avocado/ grilled halloumi', price: 30 },
+        { option: 'Add Chargrilled artichokes', price: 45 },
+      ],
+      category: ['recVQOXzQZYc3pmlm'],
       likes: 1,
-      name: 'Seafood',
+      name: 'Cobb salad',
+      images: [
+        {
+          id: 'attmPaw6rPpQeVss5',
+          url:
+            'https://dl.airtable.com/.attachments/59075957c80bf7d4c21d4cee47daf66c/d7eb0f6c/Cobb_Salad_Recipe__Culinary_Hill',
+          filename: 'Cobb_Salad_Recipe__Culinary_Hill',
+          size: 165628,
+          type: 'image/jpeg',
+          thumbnails: {
+            small: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/3f13b5f91683550ed5f68636d8efbe3e/fb251176',
+              width: 36,
+              height: 36,
+            },
+            large: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/ae6a9625461acc4d5180689a0eeb5b34/6189b2db',
+              width: 512,
+              height: 512,
+            },
+            full: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/718096444d95ee3e2d79bdc42f1c383a/2a705f01',
+              width: 3000,
+              height: 3000,
+            },
+          },
+        },
+      ],
       description:
-        'Mozzarella cheese and tomato, topped with de-shelled prawns, mussels and calamari that have been pan-fried with olive oil, garlic, lemon and tomato, with a hint of chilli.',
+        'Mixed greens with cherry tomatoes, red onion, topped with avocado, boiled egg and blue cheese.',
       totalUnitsSold: 0,
       grossSales: 0,
-      'name (from Categories)': ['Pizza'],
-      options: null,
-      notes: 'no ice please',
+      'name (from Categories)': ['Salad'],
     },
   ],
   activeOrders: [
@@ -65,21 +99,55 @@ const initialState = {
       notes: 'No ice please',
     },
     {
-      id: 'recVczFghT4sY3SUk',
+      id: 'recgZWzz4H3KEdokK',
+      subcategory: 'SALAD GREENS',
       inStock: true,
-      size: '32cm',
       canBeLiked: true,
-      unitCost: 225,
-      category: ['recaNPedbdvaT5058'],
+      unitCost: 89,
+      options: [
+        { option: 'no extras', price: 0 },
+        { option: 'Add Chicken/ Bacon', price: 25 },
+        { option: 'Add Anchovies/ avocado/ grilled halloumi', price: 30 },
+        { option: 'Add Chargrilled artichokes', price: 45 },
+      ],
+      category: ['recVQOXzQZYc3pmlm'],
       likes: 1,
-      name: 'Seafood',
+      name: 'Cobb salad',
+      images: [
+        {
+          id: 'attmPaw6rPpQeVss5',
+          url:
+            'https://dl.airtable.com/.attachments/59075957c80bf7d4c21d4cee47daf66c/d7eb0f6c/Cobb_Salad_Recipe__Culinary_Hill',
+          filename: 'Cobb_Salad_Recipe__Culinary_Hill',
+          size: 165628,
+          type: 'image/jpeg',
+          thumbnails: {
+            small: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/3f13b5f91683550ed5f68636d8efbe3e/fb251176',
+              width: 36,
+              height: 36,
+            },
+            large: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/ae6a9625461acc4d5180689a0eeb5b34/6189b2db',
+              width: 512,
+              height: 512,
+            },
+            full: {
+              url:
+                'https://dl.airtable.com/.attachmentThumbnails/718096444d95ee3e2d79bdc42f1c383a/2a705f01',
+              width: 3000,
+              height: 3000,
+            },
+          },
+        },
+      ],
       description:
-        'Mozzarella cheese and tomato, topped with de-shelled prawns, mussels and calamari that have been pan-fried with olive oil, garlic, lemon and tomato, with a hint of chilli.',
+        'Mixed greens with cherry tomatoes, red onion, topped with avocado, boiled egg and blue cheese.',
       totalUnitsSold: 0,
       grossSales: 0,
-      'name (from Categories)': ['Pizza'],
-      options: null,
-      notes: 'no ice please',
+      'name (from Categories)': ['Salad'],
     },
   ],
 }
@@ -188,6 +256,14 @@ const reducer = (state, action) => {
         currentProduct: {
           ...state.currentProduct,
           notes: action.payload,
+        },
+      }
+    case 'setCurrentProductOption':
+      return {
+        ...state,
+        currentProduct: {
+          ...state.currentProduct,
+          option: action.payload,
         },
       }
 
