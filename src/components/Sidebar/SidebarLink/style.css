@@ -3,6 +3,7 @@
 
   height: 90px;
   width: 90px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;

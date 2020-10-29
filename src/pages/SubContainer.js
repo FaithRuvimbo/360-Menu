@@ -3,11 +3,12 @@ import React, { useEffect, useContext } from 'react'
 import Sidebar from '../components/Sidebar'
 import MainContent from '../components/MainContent'
 import DetailsView from '../components/DetailsView'
+import ProductView from '../components/ProductView'
 
 import { GlobalContext } from '../store'
 
 export default function SubContainer() {
-  const [, dispatch] = useContext(GlobalContext)
+  const [{ productTab }, dispatch] = useContext(GlobalContext)
 
   useEffect(() => {
     function fetchCategories() {
@@ -32,11 +33,13 @@ export default function SubContainer() {
     fetchCategories()
     fetchProducts()
   }, [0])
+
   return (
     <div className="page-root">
       <Sidebar />
       <MainContent />
       <DetailsView />
+      {productTab && <ProductView isOpen={productTab} />}
     </div>
   )
 }

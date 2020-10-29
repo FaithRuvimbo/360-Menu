@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 
-import PropTypes, { element } from 'prop-types'
 import SidebarLink from './SidebarLink'
 import logo from '../../../static/logo/main-logo.svg'
 

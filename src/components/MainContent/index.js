@@ -5,13 +5,13 @@ import './style.css'
 
 const MainContent = () => {
   const [
-    { table, categories = [], categoryId, products: prods = [] },
+    { table, categories = [], categoryId, products: prods = [], subCategory },
+    dispatch,
   ] = useContext(GlobalContext)
 
   const category = categories.find(e => e.id === categoryId)
   const products = prods.filter(e => e.category[0] === categoryId)
   const subCategories = [...new Set(products.map(e => e.subcategory))]
-  const [subCategory, setSubCategory] = useState(subCategories[0])
 
   return (
     <div className="container">
@@ -22,6 +22,7 @@ const MainContent = () => {
       <div className="content-categories">
         {subCategories.map(elm => (
           <span
+            onClick={() => dispatch({ type: 'setSubCategory', payload: elm })}
             className={`content-category${
               elm === subCategory ? ' active' : ''
             }`}
@@ -31,9 +32,11 @@ const MainContent = () => {
         ))}
       </div>
       <div className="content-items">
-        {products.map((e, index) => (
-          <ProductCard key={index} item={e} isExpanded={e.isExpanded} />
-        ))}
+        {products
+          .filter(e => (e.subcategory ? e.subcategory === subCategory : true))
+          .map((e, index) => (
+            <ProductCard key={index} item={e} isExpanded={e.isExpanded} />
+          ))}
       </div>
     </div>
   )
